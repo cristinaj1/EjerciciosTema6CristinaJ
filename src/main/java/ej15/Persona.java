@@ -13,10 +13,12 @@ public class Persona {
 
     protected String nombre;
     protected String apelllidos;
+    protected String NIF;
 
-    public Persona(String nombre, String apelllidos) {
+    public Persona(String nombre, String apelllidos, String NIF) {
         this.nombre = nombre;
         this.apelllidos = apelllidos;
+        this.NIF = NIF;
     }
 
     public String getNombre() {
@@ -34,5 +36,15 @@ public class Persona {
     public void setApelllidos(String apelllidos) {
         this.apelllidos = apelllidos;
     }
+
+    public String getNIF() {
+        return NIF;
+    }
+
+    public void setNIF(String NIF) {
+        this.NIF = NIF;
+    }
+
+    
 
 }

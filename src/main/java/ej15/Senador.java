@@ -13,8 +13,8 @@ public class Senador extends Legislador {
 
     private double complemento;
 
-    public Senador(double complemento, String provincia, String partidoPolitico, String nombre, String apelllidos) {
-        super(provincia, partidoPolitico, nombre, apelllidos);
+    public Senador(double complemento, String provincia, String partidoPolitico, String nombre, String apelllidos, String NIF) {
+        super(provincia, partidoPolitico, nombre, apelllidos, NIF);
         this.complemento = complemento;
     }
 
@@ -60,7 +60,7 @@ public class Senador extends Legislador {
 
     @Override
     public String getCamara() {
-        String senador= "Senador";
+        String senador = "Senador";
         return senador;
     }
 

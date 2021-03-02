@@ -14,8 +14,8 @@ public abstract class Legislador extends Persona {
     protected String provincia;
     protected String partidoPolitico;
 
-    public Legislador(String provincia, String partidoPolitico, String nombre, String apelllidos) {
-        super(nombre, apelllidos);
+    public Legislador(String provincia, String partidoPolitico, String nombre, String apelllidos, String NIF) {
+        super(nombre, apelllidos, NIF);
         this.provincia = provincia;
         this.partidoPolitico = partidoPolitico;
     }

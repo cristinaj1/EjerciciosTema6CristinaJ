@@ -13,8 +13,8 @@ public class Diputado extends Legislador {
 
     private int numeroAsiento;
 
-    public Diputado(int numeroAsiento, String provincia, String partidoPolitico, String nombre, String apelllidos) {
-        super(provincia, partidoPolitico, nombre, apelllidos);
+    public Diputado(int numeroAsiento, String provincia, String partidoPolitico, String nombre, String apelllidos, String NIF) {
+        super(provincia, partidoPolitico, nombre, apelllidos, NIF);
         this.numeroAsiento = numeroAsiento;
     }
 
