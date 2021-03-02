@@ -21,7 +21,6 @@ public abstract class Vehiculo {
     //a) Podría tener descedencia debido a que 
     //los atributos pueden ser cumplido por sus descendientes sin problema alguno
 
-    //b)Si es referente a vehículos terrestres únicamente, entonces sí 
-    //podría hacerse, en cambio,  si en vehículos entran aviones ya solo 
-    //vandría el de velocidad no el del bastidor
+    //b)No por el final del código del bastidor.SI TIENE FINAL 
+    //NO SE PUEDE SOBREESCRIBIR
 }

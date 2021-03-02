@@ -17,5 +17,14 @@ public class PruebaLegislador {
         ArrayList<Legislador> legisladores = new ArrayList<>();
         legisladores.add(new Diputado(5, "Malaga", "Pozoe", "Antonio", "Bellido"));
         legisladores.add(new Senador(2, "Sevilla", "Voxito", "Manuel", "Costa"));
+        for (Legislador f : legisladores) {
+            System.out.println("Los representantes son: " + f.getCamara());
+            if (f instanceof Diputado) {
+                ((Diputado) f).getNumeroAsiento();
+            }
+            if (f instanceof Senador) {
+                ((Senador) f).getComplemento();
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@ public class Prueba {
     public static void main(String[] args) {
 
         //Lista de Maîtres
-        Maitre maria = new Maitre("0154", "María", "Fernández", "30546121457P");
+        Trabajador maria = new Maitre("0154", "María", "Fernández", "30546121457P");
         Maitre fernanda = new Maitre("0184", "Fernanda", "Matrinez", "30548471457T");
 
         // Lista de Camareros

@@ -59,8 +59,9 @@ public class Diputado extends Legislador {
     }
 
     @Override
-    public void getCamara() {
-        System.out.println("Tiene la posición de Diputado");
+    public String getCamara() {
+        String diputado = "Diputado";
+        return diputado;
 
     }
 

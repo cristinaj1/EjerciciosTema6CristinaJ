@@ -52,7 +52,7 @@ public abstract class Legislador extends Persona {
         this.apelllidos = apelllidos;
     }
 
-    public abstract void getCamara();
+    public abstract String getCamara();
 
     @Override
     public String toString() {

@@ -59,8 +59,9 @@ public class Senador extends Legislador {
     }
 
     @Override
-    public void getCamara() {
-        System.out.println("Tiene la posición de Senador");
+    public String getCamara() {
+        String senador= "Senador";
+        return senador;
     }
 
     @Override
