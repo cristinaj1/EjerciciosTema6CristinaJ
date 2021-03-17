@@ -41,6 +41,7 @@ public class Prueba {
             } else if (a instanceof Profesor) {
                 System.out.println("La especialidad del profesor/a " + a.getNombre() + " " + a.getApellidos() + " es: " + ((Profesor) a).getEspecialidad());
             }
+
             System.out.println(" ");
             System.out.println("---------------Mostrar los datos de cada objeto(que no se ven en otros)---------------------");
             System.out.println(a.getNombre());//Para que se sepa de quien es
