@@ -16,6 +16,12 @@ import java.util.Random;
  */
 public class Prueba {
 
+    // Busca al robot y lo ordena.
+    public static int buscarRobotBinario(Robot a, ArrayList array) {
+        Comparator<Robot> criterioSalud = (v1, v2) -> v1.getNumeroSerie() - (v2.getNumeroSerie());
+        return Collections.binarySearch(array, a, criterioSalud);
+    }
+
     public static void main(String[] args) {
         Random random = new Random();
         ArrayList<Robot> lista = new ArrayList<>();
@@ -23,7 +29,8 @@ public class Prueba {
         for (int i = 0; i <= 20; i++) {
             lista.add(new Robot(random.nextInt(100), random.nextInt(100)));
         }
-
+        //Creo un robot para buscarlo.
+        Robot prueba = new Robot(50, 15);
         //Por porcentaje(no me funciona ninguno)
         System.out.println("");
         System.out.println("-----------------De menor a mayor---------");
@@ -47,11 +54,14 @@ public class Prueba {
         System.out.println("");
         System.out.println("--------------Los de más de un 50% de batería--------");
         listaBateria.forEach(System.out::println);
-        
-        
-        //Preguntar a alguien mañana
-//        Collections.sort(lista,(v1,v2)->v1.getNumeroSerie().compareTo(v2.getNumeroSerie());
-//       Comparator<Robot> criterioNumero= (v1,v2)->v1.getNumeroSerie().compareTo(v2.getNumeroSerie());
-    }
 
+        //Organizar por numero de serie
+        //Buscamos la prueba de robot, primero lo añadimos
+        lista.add(prueba);
+        System.out.println("");
+        System.out.println("--------------Busqueda del robot----------");
+        //No funciona preguntar duda a Vico
+        System.out.println(lista.get(buscarRobotBinario(prueba, lista)));
+
+    }
 }
