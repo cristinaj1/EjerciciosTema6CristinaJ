@@ -42,7 +42,7 @@ public class Robot implements Comparable<Robot> {
 
     @Override
     public int compareTo(Robot r) {
-        return (int) (this.getPorcentajeVida()- r.porcentajeVida);
+        return (int) (this.getPorcentajeVida() - r.porcentajeVida);
     }
 
 }

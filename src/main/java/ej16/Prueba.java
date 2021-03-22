@@ -17,21 +17,26 @@ import java.util.Random;
 public class Prueba {
 
     // Busca al robot y lo ordena.
-    public static int buscarRobotBinario(Robot a, ArrayList array) {
-        Comparator<Robot> criterioSalud = (v1, v2) -> v1.getNumeroSerie() - (v2.getNumeroSerie());
-        return Collections.binarySearch(array, a, criterioSalud);
+    private static int buscarRobotBinario(Robot a, ArrayList array) {
+        Comparator<Robot> criterioSerie = (v1, v2) -> v1.getNumeroSerie() - (v2.getNumeroSerie());
+        return Collections.binarySearch(array, a, criterioSerie);
     }
 
     public static void main(String[] args) {
+
         Random random = new Random();
+
         ArrayList<Robot> lista = new ArrayList<>();
         ArrayList<Robot> listaBateria = new ArrayList<>();
-        for (int i = 0; i <= 20; i++) {
+
+        for (int i = 0; i < 20; i++) {
             lista.add(new Robot(random.nextInt(100), random.nextInt(100)));
         }
+
         //Creo un robot para buscarlo.
-        Robot prueba = new Robot(50, 15);
-        //Por porcentaje(no me funciona ninguno)
+        Robot prueba = new Robot(random.nextInt(100), random.nextInt(100));
+
+        //Por porcentaje
         System.out.println("");
         System.out.println("-----------------De menor a mayor---------");
         Collections.sort(lista);
@@ -60,8 +65,14 @@ public class Prueba {
         lista.add(prueba);
         System.out.println("");
         System.out.println("--------------Busqueda del robot----------");
-        //No funciona preguntar duda a Vico
-        System.out.println(lista.get(buscarRobotBinario(prueba, lista)));
+
+        //Buscar robot
+        try {
+            //La excepción es por el get
+            System.out.println(lista.get(buscarRobotBinario(prueba, lista)));
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("No se encuentra en el array el robot");
+        }
 
     }
 }
